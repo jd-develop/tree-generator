@@ -30,10 +30,19 @@ class Trunk:
         self.image.set_colorkey((255, 255, 255))
         self.rect = self.image.get_rect()
         self.rect.x = x
-        self.rect.y = 300
+        self.rect.y = 352  # fichu pixel qui dépasse :P
     
     def get_image(self, trunk):
         x = trunk * 50
         image = pygame.Surface([50, 189])
         image.blit(self.trunks, (0, 0), (x, 0, 50, 189))
         return image
+
+
+class Grass:
+    def __init__(self) -> None:
+        self.image = pygame.image.load('grass.png')
+        self.image.set_colorkey((255, 255, 255))
+        self.rect = self.image.get_rect()
+        self.rect.x = 0
+        self.rect.y = 500
