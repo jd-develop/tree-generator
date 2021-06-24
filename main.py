@@ -7,7 +7,7 @@ from tree import Tree, Grass
 pygame.init()
 pygame.font.init()
 font = pygame.font.SysFont("Tahoma", 20)
-pygame.display.set_caption(f"Tree generator")
+pygame.display.set_caption("Tree generator")
 
 screen = pygame.display.set_mode((800, 600))
 screen.fill((127, 221, 76))

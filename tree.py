@@ -27,9 +27,15 @@ class Tree:
 class Leave:
     def __init__(self, treex, treey, automnal: bool = False) -> None:
         if not automnal:
-            self.image = pygame.image.load("leave.png")
+            if random.randint(1, 10000) == 1:
+                self.image = AUTOMN_LEAVE_IMAGE
+            else:
+                self.image = LEAVE_IMAGE
         else:
-            self.image = pygame.image.load("automnleave.png")
+            if random.randint(1, 10000) == 1:
+                self.image = LEAVE_IMAGE
+            else:
+                self.image = AUTOMN_LEAVE_IMAGE
         self.image.set_colorkey((255, 255, 255))
         self.rect = self.image.get_rect()
         self.rect.x = random.randint(treex - 50, treex + 100)
@@ -76,3 +82,7 @@ class Grass:
         self.rect = self.image.get_rect()
         self.rect.x = 0
         self.rect.y = 500
+
+
+LEAVE_IMAGE = pygame.image.load("leave.png")
+AUTOMN_LEAVE_IMAGE = pygame.image.load("automnleave.png")
