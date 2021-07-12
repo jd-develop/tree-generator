@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # coding:utf-8
-import pygame
 import pygame.font
 from tree import Tree, Grass
 
@@ -73,7 +72,6 @@ while running:
             screen.blit(tree2.branches.image, tree2.branches.rect)
             for leave in tree2.leaves:
                 screen.blit(leave.image, leave.rect)
-
 
             screen.blit(grass.image, grass.rect)
 
